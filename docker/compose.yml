@@ -1,0 +1,39 @@
+volumes:
+  postgres_data:
+    driver: local
+services:
+  postgres:
+    image: postgres
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_DB=keycloak
+      - POSTGRES_USER=keycloak
+      - POSTGRES_PASSWORD=password
+  keycloak:
+    image: quay.io/keycloak/keycloak:22.0.3
+    volumes:
+      - "../build/libs:/opt/keycloak/providers/"
+    environment:
+      - KEYCLOAK_ADMIN=admin
+      - KEYCLOAK_ADMIN_PASSWORD=admin
+      - DEBUG=true
+      - DEBUG_PORT="*:8787"
+      - DB_SCHEMA=public
+      - DB_VENDOR=POSTGRES
+      - DB_ADDR=postgres
+      - DB_DATABASE=keycloak
+      - DB_USER=keycloak
+      - DB_PASSWORD=password
+    ports:
+      - "9000:9000"
+    depends_on:
+      - postgres
+    command:
+      - "start-dev"
+      - "--import-realm"
+      - "--http-enabled=true"
+      - "--http-port=9000"
+      - "--features=preview"
+      - "--cache=local"
+      - "--log-console-color=true"

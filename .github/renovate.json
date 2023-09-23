@@ -1,0 +1,30 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "config:base"
+  ],
+  "prHourlyLimit": 5,
+  "packageRules": [
+    {
+      "groupName": "Keycloak dependencies",
+      "groupSlug": "keycloak",
+      "matchPackagePrefixes": [
+        "org.keycloak"
+      ]
+    },
+    {
+      "description": "Automatically merge minor and patch-level updates",
+      "matchUpdateTypes": [
+        "minor",
+        "patch",
+        "digest"
+      ],
+      "excludePackagePrefixes": [
+        "org.keycloak"
+      ],
+      "automerge": true,
+      "automergeType": "pr",
+      "platformAutomerge": true
+    }
+  ]
+}

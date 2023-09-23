@@ -1,0 +1,25 @@
+[versions]
+keycloak = "22.0.3"
+google-apiClient = "2.2.0"
+spotless = "6.21.0"
+shadow = "8.1.1"
+junit = "5.10.0"
+assertj = "3.24.2"
+mockito = "5.5.0"
+google-autoService = "1.1.1"
+
+[plugins]
+spotless = { id = "com.diffplug.spotless", version.ref = "spotless" }
+shadow = { id = "com.github.johnrengelman.shadow", version.ref = "shadow" }
+
+[libraries]
+keycloak-core = { module = "org.keycloak:keycloak-core", version.ref = "keycloak" }
+keycloak-services = { module = "org.keycloak:keycloak-services", version.ref = "keycloak" }
+keycloak-serverSpi = { module = "org.keycloak:keycloak-server-spi", version.ref = "keycloak" }
+keycloak-serverSpi-private = { module = "org.keycloak:keycloak-server-spi-private", version.ref = "keycloak" }
+google-apiClient = { module = "com.google.api-client:google-api-client", version.ref = "google-apiClient" }
+junit-bom = { module = "org.junit:junit-bom", version.ref = "junit" }
+junit-jupiter = { module = "org.junit.jupiter:junit-jupiter" }
+assertj = { module = "org.assertj:assertj-core", version.ref = "assertj" }
+mockito = { module = "org.mockito:mockito-core", version.ref = "mockito" }
+google-autoService = { module = "com.google.auto.service:auto-service", version.ref = "google-autoService" }
