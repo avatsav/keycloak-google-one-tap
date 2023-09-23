@@ -5,7 +5,7 @@ spotless = "6.21.0"
 shadow = "8.1.1"
 junit = "5.10.0"
 assertj = "3.24.2"
-mockito = "5.1.1"
+mockito = "5.5.0"
 okhttp = "4.11.0"
 google-autoService = "1.1.1"
 
