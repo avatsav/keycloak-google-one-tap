@@ -6,7 +6,7 @@ shadow = "7.1.2"
 junit = "5.10.0"
 assertj = "3.24.2"
 mockito = "5.1.1"
-okhttp = "4.10.0"
+okhttp = "4.11.0"
 google-autoService = "1.1.1"
 
 [plugins]
