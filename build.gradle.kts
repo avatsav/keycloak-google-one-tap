@@ -1,4 +1,5 @@
 import com.diffplug.spotless.LineEnding
+import com.github.jengelman.gradle.plugins.shadow.tasks.ShadowJar
 
 plugins {
     java
@@ -12,8 +13,7 @@ repositories {
 }
 
 group = "dev.avatsav"
-
-version = "1.0"
+version = libs.versions.keycloak.get()
 
 dependencies {
     compileOnly(libs.keycloak.core)
@@ -22,9 +22,6 @@ dependencies {
     compileOnly(libs.keycloak.serverSpi.private)
 
     implementation(libs.google.apiClient)
-
-    compileOnly(libs.google.autoService)
-    annotationProcessor(libs.google.autoService)
 
     testImplementation(platform(libs.junit.bom))
     testImplementation(libs.junit.jupiter)
@@ -38,6 +35,10 @@ spotless {
         removeUnusedImports()
     }
     lineEndings = LineEnding.PLATFORM_NATIVE
+}
+
+tasks.shadowJar {
+    archiveClassifier.set("")
 }
 
 tasks.test { useJUnitPlatform() }
