@@ -1,7 +1,7 @@
 [versions]
 keycloak = "22.0.5"
 google-apiClient = "2.2.0"
-spotless = "6.22.0"
+spotless = "6.23.1"
 shadow = "8.1.1"
 junit = "5.10.1"
 assertj = "3.24.2"
