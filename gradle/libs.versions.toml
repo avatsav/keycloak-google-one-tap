@@ -4,8 +4,6 @@ google-apiClient = "2.2.0"
 spotless = "6.23.1"
 shadow = "8.1.1"
 junit = "5.10.1"
-assertj = "3.24.2"
-mockito = "5.7.0"
 
 [plugins]
 spotless = { id = "com.diffplug.spotless", version.ref = "spotless" }
@@ -17,7 +15,3 @@ keycloak-services = { module = "org.keycloak:keycloak-services", version.ref = "
 keycloak-serverSpi = { module = "org.keycloak:keycloak-server-spi", version.ref = "keycloak" }
 keycloak-serverSpi-private = { module = "org.keycloak:keycloak-server-spi-private", version.ref = "keycloak" }
 google-apiClient = { module = "com.google.api-client:google-api-client", version.ref = "google-apiClient" }
-junit-bom = { module = "org.junit:junit-bom", version.ref = "junit" }
-junit-jupiter = { module = "org.junit.jupiter:junit-jupiter" }
-assertj = { module = "org.assertj:assertj-core", version.ref = "assertj" }
-mockito = { module = "org.mockito:mockito-core", version.ref = "mockito" }

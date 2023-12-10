@@ -20,11 +20,7 @@ dependencies {
     compileOnly(libs.keycloak.services)
     compileOnly(libs.keycloak.serverSpi)
     compileOnly(libs.keycloak.serverSpi.private)
-
     implementation(libs.google.apiClient)
-
-    testImplementation(platform(libs.junit.bom))
-    testImplementation(libs.junit.jupiter)
 }
 
 java { toolchain { languageVersion.set(JavaLanguageVersion.of(17)) } }
