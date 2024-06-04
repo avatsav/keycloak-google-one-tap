@@ -1,5 +1,5 @@
 [versions]
-keycloak = "24.0.2"
+keycloak = "24.0.5"
 google-apiClient = "2.4.0"
 spotless = "6.25.0"
 shadow = "8.1.1"
