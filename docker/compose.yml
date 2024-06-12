@@ -11,7 +11,7 @@ services:
       - POSTGRES_USER=keycloak
       - POSTGRES_PASSWORD=password
   keycloak:
-    image: quay.io/keycloak/keycloak:24.0.2
+    image: quay.io/keycloak/keycloak:24.0.5
     volumes:
       - "../build/libs:/opt/keycloak/providers/"
     environment:
