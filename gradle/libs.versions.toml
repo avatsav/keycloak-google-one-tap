@@ -1,6 +1,6 @@
 [versions]
 keycloak = "25.0.0"
-google-apiClient = "2.6.0"
+google-apiClient = "2.7.0"
 spotless = "6.25.0"
 shadow = "8.1.1"
 junit = "5.10.1"
